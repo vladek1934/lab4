@@ -24,10 +24,9 @@ namespace ConsoleApplication9
             XmlSerializer xs = new XmlSerializer(typeof(Complex));
             Complex q = new Complex();
             FileStream fs = new FileStream("complex.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-            int w = int.Parse(Console.ReadLine());
-            int l = int.Parse(Console.ReadLine());
-            q.a = w;
-            q.b = l;
+            q.a = int.Parse(Console.ReadLine());
+            q.b = int.Parse(Console.ReadLine());
+          
 
    
             xs.Serialize(fs, q);
